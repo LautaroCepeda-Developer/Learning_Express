@@ -1,0 +1,31 @@
+### Get all movies
+GET http://localhost:1234/movies
+
+### Get a specific movie by id
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Get all movies with a specific genre
+GET http://localhost:1234/movies?genre=action
+
+### Create a new movie
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "The Godfather",
+    "year": 1975,
+    "director": "Francis Ford Coppola",
+    "duration": 172,
+    "poster": "https://i.ebayimg.com/images/g/iQgAAOSwKZRjvqZl/s-l1600.webp",
+    "genre": ["Drama", "Crime"],
+    "rate": 9.2
+}
+
+### Partial update a movie by id
+PATCH  http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "rate": 6.9,
+    "year": 1969
+}

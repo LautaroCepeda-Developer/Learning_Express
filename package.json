@@ -1,0 +1,33 @@
+{
+  "name": "first-api-nodejs",
+  "version": "1.0.0",
+  "description": "First API Node",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "semistandard",
+    "start": "node --env-file=.env index.mjs",
+    "dev": "nodemon --watch * --watch .env --env-file=.env --exec node  index.mjs"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "semistandard": "^17.0.0",
+    "servor": "^4.0.2"
+  },
+  "eslintConfig": {
+    "extends": "semistandard",
+    "rules": {
+      "indent.tabWidth": 4
+    }
+  },
+  "nodemonConfig": {
+    "events": {
+      "start": "clear || cls"
+    }
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "4.21.2",
+    "zod": "3.24.1"
+  }
+}
